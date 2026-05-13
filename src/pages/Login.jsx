@@ -7,7 +7,7 @@ export default function Login({ onLogin }) {
 
   const checkCode = (e) => {
     e.preventDefault();
-    if (code.toUpperCase() === "CHARIOW2025") { // Le code que vous mettrez dans le PDF
+    if (code.toUpperCase() === "XKWD7R2QM9NZ4BVT") { // Le code que vous mettrez dans le PDF
       onLogin();
     } else {
       setError(true);
