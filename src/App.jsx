@@ -10,8 +10,15 @@ import IntroWeb from './pages/lessons/IntroWeb';
 import Installation from './pages/lessons/Installation';
 import HtmlBasics from './pages/lessons/HtmlBasics';
 // Importez ici les autres pages au fur et à mesure de leur création...
-// import Forms from './pages/lessons/Forms';
-// import CssIntro from './pages/lessons/CssIntro';
+import Forms from './pages/lessons/Forms';
+import CssIntro from './pages/lessons/CssIntro';
+import Layout from './pages/lessons/Layout';
+import Responsive from './pages/lessons/Responsive';
+import Animations from './pages/lessons/Animations';
+import RealDesigns from './pages/lessons/RealDesigns';
+import FinalProject from './pages/lessons/FinalProject';
+import Bonus from './pages/lessons/Bonus';
+import Resources from './pages/lessons/Resources';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -82,7 +89,15 @@ function App() {
                         <Route path="/lesson/html-basics" element={<HtmlBasics />} />
                         
                         {/* Ajoutez vos nouvelles routes ici : */}
-                        {/* <Route path="/lesson/forms" element={<Forms />} /> */}
+                        <Route path="/lesson/forms" element={<Forms />} />
+                        <Route path="/lesson/css-intro" element={<CssIntro />} />
+                        <Route path="/lesson/layout" element={<Layout />} />
+                        <Route path="/lesson/responsive" element={<Responsive />} />
+                        <Route path="/lesson/animations" element={<Animations />} />
+                        <Route path="/lesson/real-designs" element={<RealDesigns />} />
+                        <Route path="/lesson/final-project" element={<FinalProject />} />
+                        <Route path="/lesson/bonus" element={<Bonus />} />
+                        <Route path="/lesson/resources" element={<Resources />} />
                         
                         {/* Redirection automatique vers la 1ère leçon si l'URL est inconnue */}
                         <Route path="*" element={<Navigate to="/lesson/intro" />} />

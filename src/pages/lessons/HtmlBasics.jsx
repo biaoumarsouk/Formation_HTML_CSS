@@ -2,52 +2,102 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import InteractiveDemo from '../../components/InteractiveDemo';
 
+const demoBasics = {
+  html: `<article>
+  <h1>Ma Passion pour le Code</h1>
+  <p>Le développement web est <strong>incroyable</strong>.</p>
+  
+  <h3>Ce que j'apprends :</h3>
+  <ul>
+    <li>La structure avec HTML</li>
+    <li>Le style avec CSS</li>
+  </ul>
+  
+  <a href="#">Lire la suite...</a>
+</article>`,
+  css: `article {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border-left: 10px solid #2563eb;
+}
+h1 { color: #1e293b; font-size: 24px; }
+h3 { color: #3b82f6; margin-top: 15px; }
+ul { margin-left: 20px; color: #64748b; }
+a { display: inline-block; mt: 10px; color: #2563eb; font-weight: bold; }`,
+  desc: "Exemple d'une structure d'article avec titres, listes et liens."
+};
+
 export default function HtmlBasics() {
   return (
-    <div className="flex flex-col gap-8 pb-12">
-      {/* 1. Entête */}
+    <div className="flex flex-col gap-10 animate-fadeIn">
       <header>
-        <h1 className="text-4xl font-black text-slate-900 mb-4">3. Premiers pas en HTML</h1>
-        <p className="text-lg text-slate-600 italic">Apprenez à structurer votre contenu comme un pro.</p>
+        <div className="flex items-center gap-2 text-blue-600 font-black text-xs uppercase tracking-widest mb-4">
+          <span className="w-8 h-[2px] bg-blue-600"></span>
+          Chapitre 3
+        </div>
+        <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+          Premiers pas <span className="text-blue-600">HTML</span>
+        </h1>
       </header>
 
-      {/* 2. Contenu Long (Beaucoup de texte) */}
-      <section className="prose prose-slate max-w-none text-slate-700 leading-relaxed">
-        <h2 className="text-2xl font-bold text-blue-600 mt-8 mb-4 underline">C'est quoi une balise ?</h2>
-        <p>Le HTML fonctionne avec des balises. Imaginez des étiquettes qui disent au navigateur : "Ceci est un titre", "Ceci est une image"...</p>
-        
-        {/* Répétez pour simuler un contenu long */}
-        <div className="h-64 bg-slate-100 rounded-xl my-6 flex items-center justify-center border-2 dashed border-slate-300">
-           Espace pour vos explications détaillées...
+      {/* CONCEPT DES BALISES */}
+      <section className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+          <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-lg flex items-center justify-center text-sm">1</span>
+          Anatomie d'une balise
+        </h2>
+        <p className="text-slate-600 mb-6 leading-relaxed">
+          Le HTML utilise des <strong>balises</strong> pour entourer le contenu. Elles fonctionnent presque toujours par paire.
+        </p>
+        <div className="bg-slate-900 rounded-2xl p-8 text-center">
+          <code className="text-xl md:text-2xl">
+            <span className="text-pink-500">&lt;h1&gt;</span>
+            <span className="text-white">Bonjour</span>
+            <span className="text-pink-500">&lt;/h1&gt;</span>
+          </code>
+          <div className="grid grid-cols-3 mt-4 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+            <span>Ouverture</span>
+            <span>Contenu</span>
+            <span>Fermeture</span>
+          </div>
         </div>
-
-        <h2 className="text-2xl font-bold text-blue-600 mt-8 mb-4">Les balises de texte essentielles</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>&lt;h1&gt; à &lt;h6&gt;</strong> : Pour les titres.</li>
-          <li><strong>&lt;p&gt;</strong> : Pour les paragraphes.</li>
-          <li><strong>&lt;ul&gt; et &lt;li&gt;</strong> : Pour les listes.</li>
-        </ul>
       </section>
 
-      {/* 3. Démo Interactive */}
-      <InteractiveDemo demo={{
-        html: `<h1>Mon site</h1>\n<p>Ceci est un paragraphe.</p>`,
-        css: `h1 { font-family: serif; color: darkblue; }`,
-        desc: "Testez les balises h1 et p"
-      }} />
+      {/* BALISES ESSENTIELLES */}
+      <section>
+        <h2 className="text-2xl font-bold mb-6">Les balises indispensables</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-5 bg-white rounded-2xl border border-slate-100 flex items-start gap-4">
+            <div className="text-blue-500 font-mono font-bold">&lt;h1&gt;</div>
+            <p className="text-sm text-slate-600"><strong>Titres :</strong> De h1 (le plus important) à h6.</p>
+          </div>
+          <div className="p-5 bg-white rounded-2xl border border-slate-100 flex items-start gap-4">
+            <div className="text-blue-500 font-mono font-bold">&lt;p&gt;</div>
+            <p className="text-sm text-slate-600"><strong>Paragraphe :</strong> Pour tout texte classique.</p>
+          </div>
+          <div className="p-5 bg-white rounded-2xl border border-slate-100 flex items-start gap-4">
+            <div className="text-blue-500 font-mono font-bold">&lt;a&gt;</div>
+            <p className="text-sm text-slate-600"><strong>Lien :</strong> Utilise l'attribut <em>href</em> pour la destination.</p>
+          </div>
+          <div className="p-5 bg-white rounded-2xl border border-slate-100 flex items-start gap-4">
+            <div className="text-blue-500 font-mono font-bold">&lt;img&gt;</div>
+            <p className="text-sm text-slate-600"><strong>Image :</strong> Balise orpheline (ne se ferme pas).</p>
+          </div>
+        </div>
+      </section>
 
-      {/* 4. Zone de conclusion / Pied de page de la leçon */}
-      <div className="mt-16 p-8 bg-blue-600 rounded-3xl text-white shadow-xl shadow-blue-200">
-        <h3 className="text-xl font-bold mb-2">Prêt pour la suite ?</h3>
-        <p className="text-blue-100 mb-6">Maintenant que vous connaissez les bases, voyons comment créer des formulaires interactifs.</p>
-        
+      <InteractiveDemo demo={demoBasics} />
+
+      <footer className="mt-10 py-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="text-slate-400 text-sm font-medium italic">On passe à l'interaction ?</div>
         <Link 
           to="/lesson/forms" 
-          className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-2xl font-black hover:bg-slate-100 transition-all active:scale-95"
+          className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-black shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all hover:-translate-y-1 active:scale-95"
         >
-          Aller aux Formulaires →
+          Leçon Suivante : Formulaires →
         </Link>
-      </div>
+      </footer>
     </div>
   );
 }
