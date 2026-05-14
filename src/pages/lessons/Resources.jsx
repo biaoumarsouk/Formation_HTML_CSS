@@ -531,22 +531,22 @@ export default function Resources() {
           </p>
           <div className="space-y-3">
             <a
-              href="mailto:support@votredomaine.com"
+              href="mailto:smartdev393@gmail.com"
               className="flex items-center gap-3 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group"
             >
               <span className="text-2xl">✉️</span>
               <div>
-                <p className="font-bold text-slate-900 text-sm group-hover:text-blue-700">support@votredomaine.com</p>
+                <p className="font-bold text-slate-900 text-sm group-hover:text-blue-700">smartdev393@gmail.com</p>
                 <p className="text-slate-400 text-xs">Réponse sous 24h</p>
               </div>
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/groups/smartdevcommunity"
               className="flex items-center gap-3 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group"
             >
               <span className="text-2xl">💬</span>
               <div>
-                <p className="font-bold text-slate-900 text-sm group-hover:text-blue-700">Rejoindre le Discord</p>
+                <p className="font-bold text-slate-900 text-sm group-hover:text-blue-700">Page facebook</p>
                 <p className="text-slate-400 text-xs">Communauté active d'apprenants</p>
               </div>
             </a>
