@@ -18,7 +18,7 @@ export const coursePlan = [
   // BLOC 9 & 10
   { id: 'real-designs', title: '9. Reproduction de Designs', path: '/lesson/real-designs', chapter: '5. Projets' },
   { id: 'final-project', title: '10. Projet Final Complet', path: '/lesson/final-project', chapter: '5. Projets' },
-  
+  { id: 'exercises', title: '11. Ateliers Pratiques', path: '/lesson/exercises', chapter: '5. Projets' },
   // BONUS
   { id: 'bonus', title: 'Bonus & Roadmap', path: '/lesson/bonus', chapter: '6. Extras' },
   { id: 'resources', title: 'Ressources Utiles', path: '/lesson/resources', chapter: '6. Extras' },
