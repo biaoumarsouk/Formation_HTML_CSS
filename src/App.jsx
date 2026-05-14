@@ -60,10 +60,15 @@ function App() {
                 {/* 1. HEADER MOBILE (Visible uniquement sur smartphone/tablette) */}
                 <header className="md:hidden bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between sticky top-0 z-30 shadow-sm">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black text-xs">
-                      M
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-black text-xs">
+                      <img 
+                        src="/logo.png" 
+                        alt="Logo Formation" 
+                        className="w-10 h-10 object-contain rounded-lg"
+                        onError={(e) => e.target.src = "https://placehold.co/40x40?text=L"} // Image de secours
+                      />
                     </div>
-                    <span className="font-black text-slate-800 text-sm tracking-tighter uppercase">Master HTML/CSS</span>
+                    <span className="font-black text-slate-800 text-sm tracking-tighter uppercase">Formation HTML/CSS</span>
                   </div>
                   <button 
                     onClick={() => setMenuOpen(true)}
@@ -107,7 +112,7 @@ function App() {
                     {/* Footer discret en bas de chaque page de cours */}
                     <footer className="mt-20 pt-8 border-t border-slate-200 text-center">
                       <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">
-                        Formation Master HTML & CSS © 2025 · Chariow
+                        Formation Master HTML & CSS © 2026 · SmartDev
                       </p>
                     </footer>
                   </div>
