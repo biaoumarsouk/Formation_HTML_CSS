@@ -376,7 +376,7 @@ export default function Resources() {
           <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3 flex items-center gap-2">
             <span className="text-base">🇬🇧</span> Chaînes anglophones
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
             {youtubeChannels.filter(c => c.lang === "🇬🇧").map((ch, i) => (
               <YoutubeCard key={i} ch={ch} />
             ))}
@@ -388,7 +388,7 @@ export default function Resources() {
           <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3 flex items-center gap-2">
             <span className="text-base">🇫🇷</span> Chaînes francophones
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
             {youtubeChannels.filter(c => c.lang === "🇫🇷").map((ch, i) => (
               <YoutubeCard key={i} ch={ch} />
             ))}
