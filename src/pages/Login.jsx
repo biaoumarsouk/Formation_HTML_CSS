@@ -19,7 +19,7 @@ export default function Login({ onLogin }) {
       <div className="max-w-md w-full bg-white rounded-2xl p-8 shadow-2xl">
         <div className="text-center mb-8">
           <div className="text-4xl mb-2">🚀</div>
-          <h1 className="text-2xl font-bold text-slate-800">Master HTML & CSS</h1>
+          <h1 className="text-2xl font-bold text-slate-800">APPRENDRE HTML & CSS</h1>
           <p className="text-slate-500 text-sm">Entrez le code d'accès de votre PDF</p>
         </div>
         
