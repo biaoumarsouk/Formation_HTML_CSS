@@ -35,7 +35,7 @@ export default function Login({ onLogin }) {
             Débloquer ma formation
           </button>
         </form>
-        {error && <p className="mt-4 text-red-500 text-center text-sm font-semibold">❌ Code incorrect. Vérifiez votre PDF.</p>}
+        {error && <p className="mt-4 text-red-500 text-center text-sm font-semibold">❌ Code incorrect.</p>}
       </div>
     </div>
   );
