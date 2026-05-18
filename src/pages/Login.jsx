@@ -20,13 +20,13 @@ export default function Login({ onLogin }) {
         <div className="text-center mb-8">
           <div className="text-4xl mb-2">🚀</div>
           <h1 className="text-2xl font-bold text-slate-800">APPRENDRE HTML & CSS</h1>
-          <p className="text-slate-500 text-sm">Entrez le code d'accès de votre PDF</p>
+          <p className="text-slate-500 text-sm">Entrez le code d'accès</p>
         </div>
         
         <form onSubmit={checkCode} className="space-y-4">
           <input 
             type="text" 
-            placeholder="Code d'accès (ex: SDJHSDFJJ)"
+            placeholder="Code d'accès "
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition"
             value={code}
             onChange={(e) => setCode(e.target.value)}
